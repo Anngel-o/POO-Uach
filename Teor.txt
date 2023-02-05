@@ -1,0 +1,4 @@
+Bloques de inicialización.
+Instancias creadas cuando hay Herencias.
+Encapsulamiento.
+Cómo imprime cuando crea static bloques de inicialización (corren primero por ser static)
