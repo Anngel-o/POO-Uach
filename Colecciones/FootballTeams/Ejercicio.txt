@@ -1,0 +1,36 @@
+Realice un programa que permita almacenar un conjunto de jugadores en equipos de football, deberá utilizar una map con llave tipo integer (numero del jugador) y con valor de tipo Player para las clases de tipo Team
+
+Interfaz TeamMember
+
+Clase Player
+Atributos Encapsulados (atributos privados)
+- number: Integer
+- name: String
+- position: String
+- team: String
+
+Clase Coach
+Atributos Encapsulados
+- name:String
+
+Clase Team
+Atributos Encapsulados
+- name: String
+- teamMembers: Map // contains all players and coaches
+- players: Map // all the players of the team
+- injuredPlayers: Map // contain the players that has injured
+- fieldPlayers: Map // contain the set of players that are in playing in the game
+- putPlayer: void
+- getPlayer(key: Integer): Player
+
+Clase Match
+- team1: Team
+- team2: Team
+
+Clase Season
+- teams: Map // contain all the temas in the season
+
+Clase Main
+- main: void
+
+Nota: agregue métodos o atributos conforme los vaya necesitando para crear una simulación de una temporada de football

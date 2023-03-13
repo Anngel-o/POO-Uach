@@ -1,11 +1,39 @@
 package TeacherList;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class TeacherList {
+public class Sega {
+    InterimTeacher teacher1;
+    InterimTeacher teacher2;
+    TitularTeacher teacher3;
+    TitularTeacher teacher4;
+    TeacherList tl;
+    
+    /*
+     * Atributos:
+     * • 2 profesores titulares
+     * • 2 profesores interinos
+     * • 1 lista de profesores
+     * Implementar el método main en el cual se crearán 4 objetos de tipo profesor
+     * utilizando sus constructores para capturar los datos correspondientes, además
+     * de crear una lista de profesores y agregar los 4 profesores creados
+     * anteriormente, y por ultimo deberá imprimir la lista de profesores mediante
+     * el
+     * método Listar Profesores de la lista de profesores
+     */
     public static void main(String[] args) {
-        
+        InterimTeacher teacher1 = new InterimTeacher(null, null);
+        InterimTeacher teacher2 = new InterimTeacher(null, null);
+        TitularTeacher teacher3 = new TitularTeacher(0);
+        TitularTeacher teacher4 = new TitularTeacher(0);
+
+        TeacherList tl = new TeacherList();
+        tl.addTeacher(teacher1);
+        tl.addTeacher(teacher2);
+        tl.addTeacher(teacher3);
+        tl.addTeacher(teacher4);
+
+        tl.toListTeacher();
     }
 }
 
@@ -34,9 +62,9 @@ class Person {
 
     Person(String name, String lastName, int age) {
         super();
-        this.name = name;
-        this.lastName = lastName;
-        this.age = age;
+        this.name = "Angel";
+        this.lastName = "Ortiz";
+        this.age = 20;
     }
     Person() {
         super();
@@ -59,7 +87,7 @@ class Teacher extends Person{
 
     Teacher(int employeeNumber) {
         super();
-        this.employeeNumber = employeeNumber;
+        this.employeeNumber = 1;
     }
     Teacher() {
         super();
@@ -89,8 +117,8 @@ class InterimTeacher extends Teacher{
 
     InterimTeacher(String dateStart, String dateEnd) {
         super();
-        this.dateStart = dateStart;
-        this.dateEnd = dateEnd;
+        this.dateStart = "12/01/20";
+        this.dateEnd = "12/12/20";
     }
     
     InterimTeacher() {
@@ -109,18 +137,19 @@ class TitularTeacher extends Teacher{
     }
     TitularTeacher(int cubicleNumber) {
         super();
-        this.cubicleNumber = cubicleNumber;
+        this.cubicleNumber = 1;
     }
     TitularTeacher() {
         super();
     }
 }
 
-class ListOfTeachers {
-    public List<Teacher> teachers;
+class TeacherList {
+    private ArrayList<Teacher> teachers;
 
     public void addTeacher(Teacher teacher) {
-        teachers.add(teacher);
+        //teachers.add(teacher);
+        this.teachers.add(teacher);
         /*
          * este método debe recibir un parámetro de tipo Profesor el cual
          * será agregado a la lista de profesores utilizando el método add de la clase
@@ -129,7 +158,9 @@ class ListOfTeachers {
 
     }
     public void toListTeacher() {
-        System.out.println(teachers);
+        for (Teacher i : teachers) {
+            i.showInfo();
+        }
         /*
          * este método deberá imprimir en la consola la lista de
          * profesores utilizando el método mostrar datos de cada tipo de profesor
@@ -137,28 +168,12 @@ class ListOfTeachers {
 
     }
 
-    ListOfTeachers() {
-        super();
-        List<Teacher> teachers = new ArrayList<Teacher>();
+    public TeacherList() {
+        teachers = new ArrayList<Teacher>();
         /*
          * Constructor sin parámetros: inicialice la lista de profesores creando una
          * instancia
          * de tipo ArrayList < Profesor >
          */
     }
-}
-
-class Sega {
-    /*
-     * Atributos:
-     * • 2 profesores titulares
-     * • 2 profesores interinos
-     * • 1 lista de profesores
-     * Implementar el método main en el cual se crearán 4 objetos de tipo profesor
-     * utilizando sus constructores para capturar los datos correspondientes, además
-     * de crear una lista de profesores y agregar los 4 profesores creados
-     * anteriormente, y por ultimo deberá imprimir la lista de profesores mediante
-     * el
-     * método Listar Profesores de la lista de profesores
-     */
 }
