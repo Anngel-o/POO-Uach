@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="274.0" prefWidth="426.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+   <children>
+      <TextField fx:id="txtNum1" layoutX="34.0" layoutY="125.0" />
+      <TextField fx:id="txtNum2" layoutX="255.0" layoutY="125.0" />
+      <Label fx:id="lblNum1" layoutX="81.0" layoutY="93.0" text="Número 1" />
+      <Label fx:id="lblNum2" layoutX="315.0" layoutY="93.0" text="Número 2" />
+      <Button fx:id="btnCalc" layoutX="161.0" layoutY="177.0" mnemonicParsing="false" onAction="#btnOnClicked" prefHeight="39.0" prefWidth="115.0" text="OK" />
+      <Label fx:id="lblApp" layoutX="171.0" layoutY="21.0" text="APP FX">
+         <font>
+            <Font size="30.0" />
+         </font></Label>
+      <Label fx:id="lblRes" layoutX="209.0" layoutY="85.0" text="=">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

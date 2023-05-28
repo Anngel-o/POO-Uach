@@ -1,25 +1,45 @@
 package FootballTeams;
 
-import java.security.Key;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class Team {
+    public Team() {
+    }
+
+    public Team(String name, Map<Integer, Player> players, Map<Integer, Player> fieldPlayers) {
+        this.name = name;
+        this.players = players;
+        this.fieldPlayers = fieldPlayers;
+    }
+
+    public Team(String name, Map<Integer, Player> players, Map<Coach, Player> teamMembers,
+            Map<Integer, Player> fieldPlayers, Map<Integer, Player> injuredPlayers) {
+        this.name = name;
+        this.players = players;
+        this.teamMembers = teamMembers;
+        this.fieldPlayers = fieldPlayers;
+        this.injuredPlayers = injuredPlayers;
+    }
+
     private String name;
-    private Map<Integer, Player> players = new TreeMap<Integer, Player>();
-    //Todos los jugadores  
-    private Map<Coach, Player> teamMembers = new TreeMap<Coach, Player>();
-    //Jugadores y entrenadores
+    private Map<Integer, Player> players = new TreeMap<Integer, Player>(); //todos los equipos
+    private Map<Coach, Player> teamMembers = new TreeMap<Coach, Player>(); //Jugadores y entrenadores
     private Map<Integer, Player> fieldPlayers = new TreeMap<Integer, Player>();//Jugadores en el campo
     private Map<Integer, Player> injuredPlayers = new TreeMap<Integer, Player>();//Jugadores heridos
 
-    public void putPlayer(Player player, Integer key) {//Agregar jugador
-        players.put(key, player);
+    public void putPlayer(Integer key, Player player) {//Agregar jugador
+        this.players.put(key, player);
     }
 
-    public void getPlayer() {
-        //Obtener jugador
-        //getPlayer(key: Integer): Player
+    public void getPlayer() { //Obtener jugador
+        Iterator it = players.keySet().iterator();
+        while (it.hasNext()) {
+            Integer key = (Integer) it.next();
+            System.out.println("Llave: " + key + ", valor: " + players.get(key));
+            System.out.println();
+        }
     }
 
     public String getName() {

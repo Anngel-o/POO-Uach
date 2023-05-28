@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="349.0" prefWidth="551.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController">
+   <children>
+      <ImageView fx:id="imgBackground" fitHeight="400.0" fitWidth="716.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/ghz.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgSonic" fitHeight="103.0" fitWidth="104.0" layoutX="51.0" layoutY="176.0" onMouseClicked="#MoveSonic" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/sonicIdle.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgTails" fitHeight="103.0" fitWidth="104.0" layoutX="590.0" layoutY="14.0" onMouseClicked="#MoveTails" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/tails.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgSonicMove" fitHeight="103.0" fitWidth="104.0" layoutX="52.0" layoutY="190.0" onMouseClicked="#MoveRunSonic" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../img/sonic%20spindash.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgEggman" fitHeight="103.0" fitWidth="109.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/eggman.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

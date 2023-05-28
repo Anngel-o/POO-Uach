@@ -1,0 +1,95 @@
+public class FractionsComplexProgram {
+    public static void main(String[] args) {
+
+            
+
+        // TO DO:
+
+        //       - Use instances of the Complex class in multiple operations
+
+        //       - Manage the checked exceptions and unchecked exceptions that can be trhown.
+
+        //       - Create a custom error to stop when the imaginary and/or real value at an instance of Complex
+
+        //         is bigger than 100.
+
+    }
+
+}
+
+
+
+
+class Complex {
+
+    double real;
+
+    double imaginary;
+
+
+
+
+    // TO DO: Implement an empty constructor, with default value is 0 + 0i
+
+    // TO DO: Implement a constructor with real and imaginary parameters.
+
+
+
+
+    public void sum(Complex obj){
+
+        // TO DO: Implement the method and use throws if is necesary.
+
+    }
+
+    public void substract(Complex obj){
+
+        // TO DO: Implement the method and use throws if is necesary.
+
+    }
+
+    public void multiply(Complex obj){
+
+        // TO DO: Implement the method and use throws if is necesary.
+
+    }
+
+    public void divide(Complex obj){
+
+        // TO DO: Implement the method and use throws if is necesary.
+
+    }
+
+}
+
+
+
+
+// TO DO: Implements your own exceptions, error or runtime exceptions if are necesary
+
+
+
+
+class MyException extends Exception {
+
+    // TO DO: Implements your own exceptions, error or runtime exceptions if are necesary
+
+}
+
+
+
+
+class MyError extends Error {
+
+    // TO DO: Implements your own exceptions, error or runtime exceptions if are necesary
+
+}
+
+
+
+
+class MyRuntimeException extends RuntimeException {
+
+    // TO DO: Implements your own exceptions, error or runtime exceptions if are necesary
+
+}

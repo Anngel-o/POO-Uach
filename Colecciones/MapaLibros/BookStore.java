@@ -21,7 +21,6 @@ public class BookStore {
         while (it.hasNext()) {
             Integer key = (Integer) it.next();
             System.out.println("Llave: " + key + ", valor: " + mapBooks.get(key));
-            System.out.println();
         }
 
         // for (Map.Entry<Integer, Book> m : mapBooks.entrySet()) {

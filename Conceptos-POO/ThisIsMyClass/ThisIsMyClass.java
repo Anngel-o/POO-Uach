@@ -1,5 +1,3 @@
-package ThisIsMyClass;
-
 public class ThisIsMyClass {
 
     int thisIsVariableWithVeryLongName;
